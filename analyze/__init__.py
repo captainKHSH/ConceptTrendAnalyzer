@@ -2,4 +2,4 @@
 
 from .concept_trend_analyzer import ConceptTrendAnalyzer
 from .concept_search import ConceptSearch
-from .RelatedConcepts import RelatedConcepts
+from .relatedconcepts import RelatedConcepts
