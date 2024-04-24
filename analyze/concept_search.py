@@ -56,6 +56,6 @@ class ConceptSearch:
         for result in results["results"]:
             concept_id = result["id"]
             display_name = result["display_name"]
-            wikipedia_link = result["wikipedia"]
+            wikipedia_link = result["wikipedia","N/A"]
             print("{:<15} {:<30} {:<50}".format(concept_id, display_name, wikipedia_link))
 
