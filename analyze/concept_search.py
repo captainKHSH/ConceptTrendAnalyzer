@@ -40,3 +40,22 @@ class ConceptSearch:
             
             # Print the results in table format
             self.print_results_table({"results": parsed_results})
+    @staticmethod
+    def print_results_table(results):
+        """
+        Print the search results in a table format.
+        
+        Args:
+            results (dict): A dictionary containing the search results.
+        """
+        # Print table header
+        print("{:<15} {:<30} {:<50}".format("ID", "Concept Display Name", "Wikipedia Link"))
+        print("="*95)
+        
+        # Iterate over results and print each row
+        for result in results["results"]:
+            concept_id = result["id"]
+            display_name = result["display_name"]
+            wikipedia_link = result["wikipedia"]
+            print("{:<15} {:<30} {:<50}".format(concept_id, display_name, wikipedia_link))
+
