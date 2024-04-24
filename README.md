@@ -1,7 +1,7 @@
 # Concept-Trend-Analyzer
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Systems-and-Toolchains-Fall-2023/course-project-option-2-captainKHSH)
-![GitLab last commit](https://img.shields.io/gitlab/last-commit/Systems-and-Toolchains-Fall-2023/course-project-option-2-captainKHSH)
+![GitHub repo size](https://img.shields.io/github/repo-size/captainKHSH/Concept-Trend-Analyzer)
+![GitLab last commit](https://img.shields.io/gitlab/last-commit/captainKHSH/Concept-Trend-Analyzer)
 
 The Concept Trend Analyzer (CTA) is a Python package designed to analyze trends related to various concepts using the Concept Trend Analyzer API. It provides functionality to search for concepts, retrieve related concepts, analyze trends over time, and visualize the trends using line charts.
 
