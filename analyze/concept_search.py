@@ -28,8 +28,6 @@ class ConceptSearch:
             autocomplete_url = f"{self.base_url}/autocomplete/concepts?q={query}"
             autocomplete_response = requests.get(autocomplete_url)
             autocomplete_data = autocomplete_response.json()
-            return autocomplete_data
-            
             # Parse top 5 IDs and display names from autocomplete response
             parsed_results = [{"id": concept["id"].split("/")[-1], "display_name": concept["display_name"]} for concept in autocomplete_data["results"][:5]]
             
