@@ -1,4 +1,4 @@
-"""Initialization file for the Concept Trend Analyzer package."""
-# Initialization code for the CTA.visualization subpackage
-# Import modules from the visualization subpackage
-from . import generate_charts
+"""Module for visualizing trends."""
+
+from .generate_charts import GenChart
+from .name import Conceptname
