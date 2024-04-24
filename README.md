@@ -61,5 +61,5 @@ The Concept Trend Analyzer package requires the following dependencies:
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on GitHub.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/captainKHSH/Concept-Trend-Analyzer/blob/main/LICENSE) file for details.
 
