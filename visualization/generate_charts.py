@@ -1,4 +1,3 @@
-%%writefile CTA/visualization/generate_charts.py
 """Module for generating line charts to visualize trends."""
 
 import matplotlib.pyplot as plt
