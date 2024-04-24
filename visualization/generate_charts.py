@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from CTA.analyze.concept_trend_analyzer import ConceptTrendAnalyzer
 from CTA.visualization.name import Conceptname
 
+
 class GenChart:
     """Class for generating line charts to visualize trends."""
 
