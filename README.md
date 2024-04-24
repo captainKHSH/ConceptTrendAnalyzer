@@ -15,21 +15,51 @@ The Concept Trend Analyzer (CTA) is a Python package designed to analyze trends 
 ## Installation
 
 To install the Concept Trend Analyzer package, simply use pip:
-`pip install concept-trend-analyzer`
+```bash
+pip install concept-trend-analyzer
+```
 
-Usage
+## Usage
+
 Here's how you can use the concept-trend-analyzer package:
-`from CTA.utils import CS, RC, CAT, chart
+```python
+from .main import *
+```
 
-# Search for concepts
+If you execute the `main.py` file, it will print the example usage code to the console. Then import the `utils.py`
+
+```python
+from .utils import *
+```
+
+### Search for concepts
+```python
 search_results = CS.search('CONCEPT')
-
-# Retrieve related concepts
+```
+### Retrieve related concepts
+```python
 related_concepts = RC.related('concept_id')
-
-# Analyze concept trends
+```
+### Analyze concept trends
+```python
 years, works_counts, cited_by_counts = CAT.year('concept_id', num_years=10)
-
-# Generate line charts to visualize trends
+```
+### Generate line charts to visualize trends
+```python
 chart.chart('concept_id', num_years=10)
-`
+```
+
+## Requirements
+
+The Concept Trend Analyzer package requires the following dependencies:
+
+- Python 3.x
+- requests
+- matplotlib
+
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on GitHub.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
