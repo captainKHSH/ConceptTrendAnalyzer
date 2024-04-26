@@ -26,12 +26,6 @@ class ConceptSearch:
             dict: A dictionary containing the search results.
         """
         def print_results_table(self, results):
-            """
-            Print the search results in a table format.
-
-            Args:
-                results (dict): A dictionary containing the search results.
-            """
             # Print table header
             ini = "{:<15} {:<30} {:<50}"
             print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
@@ -76,6 +70,6 @@ class ConceptSearch:
                 for concept in concepts_data["results"][:5]
             ]
 
-            # Print the results in table format
-            self.print_results_table({"results": parsed_results})
-            return parsed_results
+        # Print the results in table format
+        self.print_results_table({"results": parsed_results})
+        return parsed_results
