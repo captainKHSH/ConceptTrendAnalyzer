@@ -3,6 +3,10 @@
 
 def test_concept_search():
     """Test the ConceptSearch class."""
+    from CTA.analyze.concept_search import ConceptSearch
+
+    # Create an instance of ConceptSearch
+    CS = ConceptSearch()
     
     query = "Computer Science"
     search_results = CS.search(query)
