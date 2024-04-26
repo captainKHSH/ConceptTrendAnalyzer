@@ -3,7 +3,7 @@
 
 def test_concept_search():
     """Test the ConceptSearch class."""
-    from analyze.concept_search import ConceptSearch
+    from utils import CS
 
     # Create an instance of ConceptSearch
     cs = ConceptSearch()
