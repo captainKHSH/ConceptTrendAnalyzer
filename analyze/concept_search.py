@@ -79,7 +79,7 @@ class ConceptSearch:
         """
         ini = "{:<15} {:<30} {:<50}"
         formatted_results = ""
-        n = "\n"
+        n = print("\n")
 
         # Iterate over results and print each row
         for result in results["results"]:
