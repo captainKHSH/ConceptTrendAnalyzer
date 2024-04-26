@@ -74,8 +74,8 @@ class ConceptSearch:
         """
         # Print table header
         ini = "{:<15} {:<30} {:<50}"
-        print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
-        print("=" * 95)
+        a = print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
+        b = print("=" * 95)
 
         # Iterate over results and print each row
         for result in results["results"]:
@@ -83,3 +83,4 @@ class ConceptSearch:
             display_name = result["display_name"]
             wikipedia_link = result.get("wikipedia", "N/A")
             print(ini.format(concept_id, display_name, wikipedia_link))
+        return a b
