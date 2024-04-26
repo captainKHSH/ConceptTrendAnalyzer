@@ -69,7 +69,4 @@ class ConceptSearch:
                 }
                 for concept in concepts_data["results"][:5]
             ]
-
-        # Print the results in table format
-        self.print_results_table({"results": parsed_results})
         return parsed_results
