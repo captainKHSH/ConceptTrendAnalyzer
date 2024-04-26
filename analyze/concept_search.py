@@ -36,7 +36,6 @@ class ConceptSearch:
         concepts_response = requests.get(concepts_url)
         concepts_data = concepts_response.json()
 
-
         # If no results are found, search using the autocomplete endpoint
         if concepts_data["meta"]["count"] == 0:
             aut = f"{self.base_url}/autocomplete/concepts?q={query}"
@@ -66,7 +65,8 @@ class ConceptSearch:
         for item in parsed_results:
             table.append([item['id'], item['display_name'], item['wikipedia']])
 
-        print(tabulate(table, headers=['ID', 'Display Name', 'Wikipedia Link'], tablefmt='grid'))
+        headers = ['ID', 'Display Name', 'Wikipedia Link']
+        print(tabulate(table, headers, tablefmt='grid'))
         # Check if table is not empty
         if table:
             return True
