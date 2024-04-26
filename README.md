@@ -23,13 +23,13 @@ pip install concept-trend-analyzer
 
 Here's how you can use the concept-trend-analyzer package:
 ```python
-from .main import *
+from main import *
 ```
 
 If you execute the `main.py` file, it will print the example usage code to the console. Then import the `utils.py`
 
 ```python
-from .utils import *
+from utils import *
 ```
 
 ### Search for concepts
