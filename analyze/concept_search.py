@@ -25,18 +25,10 @@ class ConceptSearch:
         -------
             dict: A dictionary containing the search results.
         """
-        def print_results_table(self, results):
-            # Print table header
-            ini = "{:<15} {:<30} {:<50}"
-            print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
-            print("=" * 95)
-
-            # Iterate over results and print each row
-            for result in results["results"]:
-                concept_id = result["id"]
-                display_name = result["display_name"]
-                wikipedia_link = result.get("wikipedia", "N/A")
-                print(ini.format(concept_id, display_name, wikipedia_link))
+        # Print table header
+        ini = "{:<15} {:<30} {:<50}"
+        print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
+        print("=" * 95)
 
         # First search using the concepts endpoint
         concepts_url = f"{self.base_url}/concepts?search={query}"
@@ -69,4 +61,12 @@ class ConceptSearch:
                 }
                 for concept in concepts_data["results"][:5]
             ]
+        
+        # Iterate over results and print each row
+        for result in parsed_results:
+            concept_id = result["id"]
+            display_name = result["display_name"]
+            wikipedia_link = result.get("wikipedia", "N/A")
+            print(ini.format(concept_id, display_name, wikipedia_link))
+        
         return parsed_results
