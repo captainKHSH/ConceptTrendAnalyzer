@@ -1,8 +1,8 @@
 """Module for generating line charts to visualize trends."""
 
 import matplotlib.pyplot as plt
-from ConceptTrendAnalyzer.analyze.concept_trend_analyzer import ConceptTrendAnalyzer
-from ConceptTrendAnalyzer.visualization.name import Conceptname
+from analyze.concept_trend_analyzer import ConceptTrendAnalyzer
+from visualization.name import Conceptname
 
 
 class GenChart:
