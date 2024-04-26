@@ -13,6 +13,7 @@ def test_concept_search():
     # Assert that search results are not empty
     assert search_results is not None
 
+
 def test_autocomplete_concepts():
     """
     Test the RelatedConcepts class.
