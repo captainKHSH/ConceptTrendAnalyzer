@@ -26,7 +26,6 @@ class ConceptSearch:
         -------
             dict: A dictionary containing the search results.
         """
-
         # First search using the concepts endpoint
         concepts_url = f"{self.base_url}/concepts?search={query}"
         concepts_response = requests.get(concepts_url)
@@ -43,7 +42,7 @@ class ConceptSearch:
                 {
                     "id": concept["id"].split("/")[-1],
                     "display_name": concept["display_name"],
-                    "wikipedia": concept.get("ids", {}).get("wikipedia", "N/A"),
+                    "wikipedia": concept.get("ids", {}).get("wikipedia", "NA"),
                 }
                 for concept in autocomplete_data["results"][:5]
             ]
