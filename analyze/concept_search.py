@@ -26,10 +26,6 @@ class ConceptSearch:
         -------
             dict: A dictionary containing the search results.
         """
-        # Print table header
-        ini = "{:<15} {:<30} {:<50}"
-        print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
-        print("=" * 95)
 
         # First search using the concepts endpoint
         concepts_url = f"{self.base_url}/concepts?search={query}"
@@ -47,6 +43,7 @@ class ConceptSearch:
                 {
                     "id": concept["id"].split("/")[-1],
                     "display_name": concept["display_name"],
+                    "wikipedia": concept.get("ids", {}).get("wikipedia", "N/A"),
                 }
                 for concept in autocomplete_data["results"][:5]
             ]
