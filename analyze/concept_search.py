@@ -61,12 +61,24 @@ class ConceptSearch:
                 }
                 for concept in concepts_data["results"][:5]
             ]
-        p = ""
-        # Iterate over results and print each row
-        for result in parsed_results:
-            concept_id = result["id"]
-            display_name = result["display_name"]
-            wikipedia_link = result.get("wikipedia", "N/A")
-            p += ini.format(concept_id, display_name, wikipedia_link)
-        
-        return p
+        # Initialize an empty string to store the formatted table
+        formatted_table = ""
+
+        # Add the table headers
+        formatted_table += "ID\t\t\tDisplay Name\t\t\tWikipedia Link\n"
+        formatted_table += "-" * 70 + "\n"
+
+        # Add each row of the table
+        for item in parsed_results:
+            id_str = item['id']
+            display_name_str = item['display_name']
+            wikipedia_link_str = item.get('wikipedia', '')
+
+            # Adjust tabs for better alignment
+            tabs_id = '\t' * (3 - len(id_str) // 8)
+            tabs_display_name = '\t' * (3 - len(display_name_str) // 8)
+
+            # Add the formatted row to the table
+            formatted_table += f"{id_str}{tabs_id}{display_name_str}{tabs_display_name}{wikipedia_link_str}\n"
+
+        return formatted_table
