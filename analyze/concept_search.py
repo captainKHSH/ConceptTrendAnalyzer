@@ -61,12 +61,12 @@ class ConceptSearch:
                 }
                 for concept in concepts_data["results"][:5]
             ]
-        
+        p = ""
         # Iterate over results and print each row
         for result in parsed_results:
             concept_id = result["id"]
             display_name = result["display_name"]
             wikipedia_link = result.get("wikipedia", "N/A")
-            print(ini.format(concept_id, display_name, wikipedia_link))
+            p += print(ini.format(concept_id, display_name, wikipedia_link))
         
-        return parsed_results
+        return p
