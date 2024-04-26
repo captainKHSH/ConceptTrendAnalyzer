@@ -78,12 +78,12 @@ class ConceptSearch:
             results (dict): A dictionary containing the search results.
         """
         formatted_results = ""
+        ini = print("{:<15} {:<30} {:<50} \n")
 
         # Iterate over results and print each row
         for result in results["results"]:
             concept_id = result["id"]
             display_name = result["display_name"]
             wikipedia_link = result.get("wikipedia", "N/A")
-            formatted_results += "{:<15} {:<30} {:<50}".format(concept_id, display_name, wikipedia_link)
-        p =  print(formatted_results)
-        return p
+            formatted_results += ini.format(concept_id, display_name, wikipedia_link)
+        return formatted_results
