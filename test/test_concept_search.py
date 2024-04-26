@@ -3,14 +3,11 @@
 
 def test_concept_search():
     """Test the ConceptSearch class."""
-    from utils import CS
-
-    # Create an instance of ConceptSearch
-    cs = ConceptSearch()
+    from ConceptTrendAnalyzer.utils import CS
 
     # Test searching for a concept
     query = "Computer Science"
-    search_results = cs.search(query)
+    search_results = CS.search(query)
 
     # Assert that search results are not empty
     assert search_results is not None
