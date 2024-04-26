@@ -25,13 +25,11 @@ class ConceptSearch:
         -------
             dict: A dictionary containing the search results.
         """
-        @staticmethod
-        def print_results_table(results):
+        def print_results_table(self, results):
             """
             Print the search results in a table format.
 
-            Args
-            ----
+            Args:
                 results (dict): A dictionary containing the search results.
             """
             # Print table header
@@ -67,9 +65,6 @@ class ConceptSearch:
                 for concept in autocomplete_data["results"][:5]
             ]
 
-            # Print the results in table format
-            R = self.print_results_table({"results": parsed_results})
-
         else:
             # Parse id, display_name, and wikipedia from concepts response
             parsed_results = [
@@ -82,5 +77,5 @@ class ConceptSearch:
             ]
 
             # Print the results in table format
-            R = self.print_results_table({"results": parsed_results})
-            return R
+            self.print_results_table({"results": parsed_results})
+            return parsed_results
