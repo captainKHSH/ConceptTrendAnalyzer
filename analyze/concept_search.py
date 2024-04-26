@@ -63,8 +63,12 @@ class ConceptSearch:
                 for concept in concepts_data["results"][:5]
             ]
         table = []
-    for item in data:
-        table.append([item['id'], item['display_name'], item['wikipedia']])
+        for item in parsed_results:
+            table.append([item['id'], item['display_name'], item['wikipedia']])
 
-    p = print(tabulate(table, headers=['ID', 'Display Name', 'Wikipedia Link'], tablefmt='grid'))
-    return p
+        print(tabulate(table, headers=['ID', 'Display Name', 'Wikipedia Link'], tablefmt='grid'))
+        # Check if table is not empty
+        if table:
+            return True
+        else:
+            return None
