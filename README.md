@@ -16,7 +16,7 @@ The Concept Trend Analyzer (CTA) is a Python package designed to analyze trends 
 
 To install the Concept Trend Analyzer package, simply use pip:
 ```bash
-pip install concept-trend-analyzer
+pip install CTA
 ```
 
 ## Usage
@@ -56,6 +56,9 @@ The Concept Trend Analyzer package requires the following dependencies:
 - Python 3.x
 - requests
 - matplotlib
+- tabulate
+- black
+- flake8
 
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on GitHub.
