@@ -25,15 +25,32 @@ class ConceptSearch:
         -------
             dict: A dictionary containing the search results.
         """
+        @staticmethod
+        def print_results_table(results):
+            """
+            Print the search results in a table format.
+
+            Args
+            ----
+                results (dict): A dictionary containing the search results.
+            """
+            # Print table header
+            ini = "{:<15} {:<30} {:<50}"
+            print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
+            print("=" * 95)
+
+            # Iterate over results and print each row
+            for result in results["results"]:
+                concept_id = result["id"]
+                display_name = result["display_name"]
+                wikipedia_link = result.get("wikipedia", "N/A")
+                print(ini.format(concept_id, display_name, wikipedia_link))
+
         # First search using the concepts endpoint
         concepts_url = f"{self.base_url}/concepts?search={query}"
         concepts_response = requests.get(concepts_url)
         concepts_data = concepts_response.json()
-        
-        # Print table header
-        ini = "{:<15} {:<30} {:<50}"
-        print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
-        print("=" * 95)
+
 
         # If no results are found, search using the autocomplete endpoint
         if concepts_data["meta"]["count"] == 0:
@@ -67,24 +84,3 @@ class ConceptSearch:
             # Print the results in table format
             R = self.print_results_table({"results": parsed_results})
             return R
-
-    @staticmethod
-    def print_results_table(results):
-        """
-        Print the search results in a table format.
-
-        Args
-        ----
-            results (dict): A dictionary containing the search results.
-        """
-        ini = "{:<15} {:<30} {:<50}"
-        formatted_results = ""
-
-        # Iterate over results and print each row
-        for result in results["results"]:
-            concept_id = result["id"]
-            display_name = result["display_name"]
-            wikipedia_link = result.get("wikipedia", "N/A")
-            formatted_results += ini.format(concept_id, display_name, wikipedia_link)
-            print("\n")
-        return formatted_results
