@@ -1,12 +1,12 @@
 """Test module for Concept Trend Analyzer."""
 from analyze.concept_search import ConceptSearch
 
+
 def test_concept_search():
     """Test the ConceptSearch class."""
-
     # Create an instance of ConceptSearch
     CS = ConceptSearch()
-    
+
     query = "Computer Science"
     search_results = CS.search(query)
 
