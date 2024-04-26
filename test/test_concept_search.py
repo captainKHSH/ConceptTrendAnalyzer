@@ -13,6 +13,20 @@ def test_concept_search():
     # Assert that search results are not empty
     assert search_results is not None
 
+def test_autocomplete_concepts():
+    """
+    Test the RelatedConcepts class.
+    """
+
+    # Create an instance of ConceptSearch
+    CS = ConceptSearch()
+
+    query = "Comp"
+    search_results = CS.search(query)
+
+    # Assert that search results are not empty
+    assert search_results is not None
+
 
 if __name__ == "__main__":
     # Run the test functions
