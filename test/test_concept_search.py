@@ -1,9 +1,8 @@
 """Test module for Concept Trend Analyzer."""
-
+from analyze.concept_search import ConceptSearch
 
 def test_concept_search():
     """Test the ConceptSearch class."""
-    from CTA.analyze.concept_search import ConceptSearch
 
     # Create an instance of ConceptSearch
     CS = ConceptSearch()
