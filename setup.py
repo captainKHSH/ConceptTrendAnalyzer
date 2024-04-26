@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="CTTA",
+    name="CTA",
     version="1.0.0",
     description="A Python package for concept search and trend analysis using \
     the OpenAlex database.",
