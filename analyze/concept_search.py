@@ -46,7 +46,7 @@ class ConceptSearch:
             ]
 
             # Print the results in table format
-            self.print_results_table({"results": parsed_results})
+            R = self.print_results_table({"results": parsed_results})
 
         else:
             # Parse id, display_name, and wikipedia from concepts response
