@@ -29,6 +29,11 @@ class ConceptSearch:
         concepts_url = f"{self.base_url}/concepts?search={query}"
         concepts_response = requests.get(concepts_url)
         concepts_data = concepts_response.json()
+        
+        # Print table header
+        ini = "{:<15} {:<30} {:<50}"
+        print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
+        print("=" * 95)
 
         # If no results are found, search using the autocomplete endpoint
         if concepts_data["meta"]["count"] == 0:
@@ -72,10 +77,6 @@ class ConceptSearch:
         ----
             results (dict): A dictionary containing the search results.
         """
-        # Print table header
-        ini = "{:<15} {:<30} {:<50}"
-        a = print(ini.format("ID", "Concept Display Name", "Wikipedia Link"))
-        b = print("=" * 95)
 
         # Iterate over results and print each row
         for result in results["results"]:
@@ -83,4 +84,3 @@ class ConceptSearch:
             display_name = result["display_name"]
             wikipedia_link = result.get("wikipedia", "N/A")
             print(ini.format(concept_id, display_name, wikipedia_link))
-        return a b
