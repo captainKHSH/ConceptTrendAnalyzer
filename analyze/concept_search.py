@@ -84,5 +84,5 @@ class ConceptSearch:
             concept_id = result["id"]
             display_name = result["display_name"]
             wikipedia_link = result.get("wikipedia", "N/A")
-            formatted_results += f"| {concept_id} | {display_name} | {wikipedia_link} |\n"
+            formatted_results += format(concept_id, display_name, wikipedia_link) + "\n"
         return formatted_results
