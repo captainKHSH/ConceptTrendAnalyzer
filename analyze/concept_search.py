@@ -78,6 +78,7 @@ class ConceptSearch:
             results (dict): A dictionary containing the search results.
         """
         ini = "{:<15} {:<30} {:<50}"
+        formatted_results = ""
 
         # Iterate over results and print each row
         for result in results["results"]:
