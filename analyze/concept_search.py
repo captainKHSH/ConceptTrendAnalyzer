@@ -60,7 +60,8 @@ class ConceptSearch:
             ]
 
             # Print the results in table format
-            self.print_results_table({"results": parsed_results})
+            R = self.print_results_table({"results": parsed_results})
+            return R
 
     @staticmethod
     def print_results_table(results):
