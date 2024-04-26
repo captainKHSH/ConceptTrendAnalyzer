@@ -3,9 +3,7 @@
 
 def test_concept_search():
     """Test the ConceptSearch class."""
-    from ConceptTrendAnalyzer.analyze.concept_search import ConceptSearch
-
-    ConceptSearch = CS
+    
     query = "Computer Science"
     search_results = CS.search(query)
 
