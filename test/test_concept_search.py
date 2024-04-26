@@ -15,10 +15,7 @@ def test_concept_search():
 
 
 def test_autocomplete_concepts():
-    """
-    Test the RelatedConcepts class.
-    """
-
+    """Test the ConceptSearch class."""
     # Create an instance of ConceptSearch
     CS = ConceptSearch()
 
