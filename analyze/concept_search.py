@@ -79,7 +79,6 @@ class ConceptSearch:
         """
         ini = "{:<15} {:<30} {:<50}"
         formatted_results = ""
-        n = "\n"
 
         # Iterate over results and print each row
         for result in results["results"]:
@@ -87,5 +86,5 @@ class ConceptSearch:
             display_name = result["display_name"]
             wikipedia_link = result.get("wikipedia", "N/A")
             formatted_results += ini.format(concept_id, display_name, wikipedia_link)
-            n += n
+            print("\n")
         return formatted_results
