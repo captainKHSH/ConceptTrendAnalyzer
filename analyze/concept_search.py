@@ -62,7 +62,7 @@ class ConceptSearch:
             table.append([item["id"], item["display_name"], item["wikipedia"]])
 
         headers = ["ID", "Display Name", "Wikipedia Link"]
-        print(tabulate(table, headers, tablefmt="grid"))
+        print(tabulate(table, headers, tablefmt="fancy_grid"))
         # Check if table is not empty
         if table:
             return True
